@@ -1,4 +1,4 @@
-module github.com/huizhang-open-source/delay_queue
+module delay_queue
 
 go 1.17
 
