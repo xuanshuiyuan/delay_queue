@@ -172,9 +172,10 @@ func getWaitingMessages(ctx context.Context, task Task) []string {
 		})
 		return messages
 	}
-
-	for _, item := range res.([]interface{}) {
-		messages = append(messages, fmt.Sprintf("%s", item))
+	if res != nil{
+		for _, item := range res.([]interface{}) {
+			messages = append(messages, fmt.Sprintf("%s", item))
+		}
 	}
 	return messages
 }
