@@ -9,6 +9,7 @@ import (
 
 type Redis interface {
 	ZAdd(ctx context.Context, key string, messages ...string) error
+	ZAddT(ctx context.Context, key string, time int64, messages ...string) error
 	ZRem(ctx context.Context, key string, messages ...string) error
 	EvalSha(ctx context.Context, sha1 string, values []interface{}) (interface{}, error)
 	LoadScript(ctx context.Context, script string) error
@@ -17,6 +18,19 @@ type Redis interface {
 type DefaultRedis struct {
 	Host string
 	Port int
+}
+
+func (d DefaultRedis) ZAddT(ctx context.Context, key string, time int64, messages ...string) error {
+	args := []interface{}{
+		key,
+		"NX",
+		time,
+	}
+	for _, message := range messages {
+		args = append(args, message)
+	}
+	_, err := d.execCommand("ZADD", args...)
+	return err
 }
 
 func (d DefaultRedis) ZAdd(ctx context.Context, key string, messages ...string) error {

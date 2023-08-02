@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="219ad92d-c01a-4a82-bf91-19cd3a12a20d" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer.go" beforeDir="false" afterPath="$PROJECT_DIR$/producer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/redis.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +19,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/redis.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/redis.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/server_test.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/task.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/producer.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/producer.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/producer_test.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/server.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/consumer.go" root0="SKIP_INSPECTION" />

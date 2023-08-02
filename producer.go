@@ -24,6 +24,10 @@ func (p *Producer) PushMessage(ctx context.Context, taskName string, message str
 	return p.redis.ZAdd(ctx, waitingQueueKey(taskName), message)
 }
 
+func (p *Producer) PushMessageT(ctx context.Context, taskName string, time int64, message string) error {
+	return p.redis.ZAddT(ctx, waitingQueueKey(taskName), time, message)
+}
+
 func (p *Producer) DeleteMessage(ctx context.Context, taskName string, message string) error {
 	_, err := execLuaScript(ctx, p.redis, p.luaSha1DelMessage, DelMessageScript, []interface{}{
 		2,
